@@ -78,8 +78,8 @@ class MainActivity : AppCompatActivity() {
     fun test(bitmap: Bitmap) {
         val bitmap = Bitmap.createScaledBitmap(bitmap, 128, 128, true)
         val input = ByteBuffer.allocateDirect(128*128*3*4).order(ByteOrder.nativeOrder())
-        for (y in 0 until 224) {
-            for (x in 0 until 224) {
+        for (y in 0 until 128) {
+            for (x in 0 until 128) {
                 val px = bitmap.getPixel(x, y)
 
                 // Get channel values from the pixel value.
